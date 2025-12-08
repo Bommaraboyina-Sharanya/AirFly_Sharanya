@@ -54,68 +54,90 @@ Delay Analysis (Airline, Weather, NAS)
 
 Dashboard Preparation and Explanation :
 
-The Airline Performance and Delay Analysis Dashboard provides a comprehensive operational overview of flight performance, delay patterns, cancellations, and route-level insights. Each visual serves a specific analytical role.
+The Airline Performance and Delay Analysis Dashboard 🛬 provides a comprehensive operational overview of flight performance, delay patterns, cancellations, and route-level insights. Each visual serves a specific analytical role.
 
+1. KPI Cards (Top Summary Metrics)
 
-1. KPI Summary Cards
+1.1 Total Flights (2M)
 
--> Total Flights (2M)
+Purpose: Displays the total number of flights recorded in the dataset.
+Insight: Provides a high-level operational volume overview and acts as a denominator for calculating performance ratios across the dashboard.
 
-Shows the overall number of flights in the dataset, offering a high-level operational scale.
+1.2 Average Delay (10 minutes)
 
--> Average Delay (10 minutes)
+Purpose: Shows the overall mean delay across all flights.
+Insight: A single performance indicator used to assess general efficiency and identify whether aggregate delays are within acceptable industry thresholds.
 
-Represents the mean delay across all flights and acts as a key performance indicator for operational efficiency.
+1.3 Count of Cancelled Flights (1.75M)
 
--> Cancelled Flights (1.75M)
+-Purpose: Shows the total number of cancelled flights in the dataset.
+-Insight: Offers an immediate view of flight reliability issues and helps correlate cancellations with other factors displayed in the dashboard.
 
-Displays total cancellations, highlighting reliability issues and overall system disruptions.
+2. Slicer Panel (Airline, Month, Delay Reason, Day of Week)
 
+-Purpose: Enables users to filter the dashboard based on airline, month, reason for delay, or weekday.
+-Insight: Allows stakeholders to perform targeted analysis, observe patterns for specific carriers, and identify seasonal or operational variations.
 
-2. Slicer Panel : Filters for Airline, Month, Delay Reason, Day of Week.
-   
-Enables interactive drill-downs by airline, seasonality, and delay factors.
+3. Count of FlightID by Flight Status (Pie Chart)
 
-3. Flight Status Distribution (Pie Chart)
+-Purpose: Represents the proportion of flights grouped by their final status (Cancelled, Diverted, Early Arrival, Small Delay, Medium Delay, etc.).
+-Insight: 
+  Highlights the distribution of operational outcomes.
+  Shows what percentage of flights experience delays vs cancellations vs normal operations.
+  Helps identify which statuses dominate the dataset.
 
--> Shows the proportion of flights by status:
-   Cancelled, Diverted, Early, Small Delay, Medium Delay, etc.
-   Helps understand the overall operational outcome distribution.
+4. Average of Delay Minutes by Airline (Horizontal Bar Chart)
 
-4. Average Delay by Airline (Bar Chart)
+-Purpose: Compares airlines based on their average delay duration.
+-Insight:   Enables direct benchmarking between carriers.
+                Helps identify which airline performs best and which consistently faces longer delays.
+                Valuable for operational improvement and competitive analysis.
 
--> Compares airlines based on average delay minutes.
--> Useful for benchmarking carriers and identifying best/worst performers.
+5. Count of Delay Status by Delay Reason (Doughnut Chart)
 
-5. Delay Status by Delay Reason (Doughnut Chart)
+-Purpose: Breaks down the total number of delay instances by the corresponding reason (Weather, Maintenance, Security, Air Traffic, etc.).
+-Insight:  Shows which operational areas contribute most to delays.
+              Helps management prioritize areas for process improvement.
+              Highlights dominant delay categories such as weather or system maintenance.
 
--> Breaks down delay instances across categories like Weather, Maintenance, Carrier, and NAS.
--> Provides clarity on major contributors to system-wide delays.
+6. Airline vs Destination: Average Delay Patterns (Scatter Plot)
 
+-Purpose: Visualizes how different airlines perform on various destinations in terms of average delay.
+-Insight:  Identifies destination-specific delay .
+              Shows variations across airports such as BOS, JFK, MIA, SEA, SFO.
+              Helps reveal if certain routes consistently face longer delays, regardless of the airline.
 
-6. Airline vs Destination Delay Patterns (Scatter Plot)
+7. Count of Flights by Month and Flight Status (Clustered Column Chart)
 
--> Shows how airlines perform at various destination airports based on delay averages.
--> Highlights route-specific delay issues and airport congestion patterns.
+-Purpose: Displays monthly distribution of flights categorized by status (Cancelled, Diverted, Early, etc.).
+-Insight:  Helps identify seasonal trends (e.g., cancellations in winter or peak traffic in summer).
+              Supports forecasting and resource allocation.
+              Shows how operational status fluctuates month-by-month.
 
+8. Average of Delay Minutes by Delay Reason (Bar Chart)
 
+-Purpose: Shows the average delay minutes for each delay reason category.
+-Insight: Quantifies severity of each delay reason.
+              Allows comparison between frequency  and impact (this visual).
+              Useful for prioritizing improvements e.g., weather may be frequent but maintenance may cause longer delays.
 
-7. Monthly Flight Count by Status (Column Chart)
+9. Average Delay by Airline and Flight Status (Column Chart)
 
--> Analyzes monthly operational behaviour and flight status frequency.
--> Useful to detect seasonal patterns and high-cancellation periods.
+-Purpose: Displays delay averages for each airline based on flight status (Cancelled, Diverted, Early Arrival, Small Delay, Medium Delay).
+Insight:  Enables multi-dimensional performance assessment.
+              Shows not just overall delay (Visual #4) but how each status contributes to an airline’s delay pattern.
+              Helps identify whether a carrier suffers more from cancellations or late departures.
 
+-> Overall Purpose of the Dashboard
 
-8. Average Delay Minutes by Delay Reason (Bar Chart)
+ This dashboard provides a complete analysis of airline operational behaviour, focusing on:
 
--> Measures severity of each delay cause (e.g., weather delays might be fewer but longer).
--> Guides prioritization of operational improvement areas.
-
-
-9. Average Delay by Airline & Flight Status (Column Chart)**
-
--> Displays the relationship between flight status and average delay for each airline.
--> Provides deeper insight into operational behaviour beyond simple averages.
+-Total operational scale
+-Delay patterns and their root causes
+-Airline-wise performance benchmarking
+-Route and destination-specific variability
+-Seasonal flight analysis
+-Status distribution and reliability metrics
 
 
 📌 Submission Details
